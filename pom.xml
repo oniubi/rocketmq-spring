@@ -34,6 +34,11 @@
     <description>Build for Apache RocketMQ Spring Boot Support</description>
     <url>https://github.com/apache/rocketmq-spring</url>
 
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
 
     <scm>
         <url>git@github.com:apache/rocketmq-spring.git</url>
@@ -215,8 +220,8 @@
         <module>rocketmq-spring-boot-parent</module>
         <module>rocketmq-spring-boot</module>
         <module>rocketmq-spring-boot-starter</module>
-        <!-- Note: The samples need to mvn compiple in its own directory
+        <!-- Note: The samples need to mvn compiple in its own directory      -->
                 <module>rocketmq-spring-boot-samples</module>
-        -->
+
     </modules>
 </project>

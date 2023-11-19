@@ -35,17 +35,17 @@
 
     <properties>
         <project.rootdir>${project.basedir}/..</project.rootdir>
-        <spring.boot.version>2.0.5.RELEASE</spring.boot.version>
-        <spring.version>5.1.0.RELEASE</spring.version>
+        <spring.boot.version>3.1.5</spring.boot.version>
+        <spring.version>6.0.13</spring.version>
 
         <rocketmq.spring.boot.version>2.2.1</rocketmq.spring.boot.version>
 
-        <rocketmq.version>4.9.1</rocketmq.version>
-        <slf4j.version>1.7.25</slf4j.version>
+        <rocketmq.version>4.9.4</rocketmq.version>
+        <slf4j.version>2.0.9</slf4j.version>
         <jackson.version>2.11.1</jackson.version>
         <fastjson.version>1.2.72</fastjson.version>
 
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <resource.delimiter>@</resource.delimiter>
         <!-- Delimiter that doesn't clash with Spring ${} placeholders -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -168,6 +168,13 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>javax.annotation</groupId>
+                <artifactId>javax.annotation-api</artifactId>
+                <version>1.3.2</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

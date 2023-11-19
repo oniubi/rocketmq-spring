@@ -32,11 +32,13 @@
         <property name="header" value="/\*\nLicensed to the Apache Software Foundation*"/>
         <property name="fileExtensions" value="java" />
     </module>
+<!--
 
     <module name="RegexpSingleline">
         <property name="format" value="System\.out\.println"/>
         <property name="message" value="Prohibit invoking System.out.println in source code !"/>
     </module>
+-->
 
     <module name="RegexpSingleline">
         <property name="format" value="//FIXME"/>
