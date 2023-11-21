@@ -30,6 +30,7 @@ import org.apache.rocketmq.samples.springboot.domain.OrderPaidEvent;
 import org.apache.rocketmq.samples.springboot.domain.ProductWithPayload;
 import org.apache.rocketmq.samples.springboot.domain.User;
 import org.apache.rocketmq.spring.annotation.RocketMQTransactionListener;
+import org.apache.rocketmq.spring.autoconfigure.RocketMQAutoConfiguration;
 import org.apache.rocketmq.spring.core.RocketMQLocalRequestCallback;
 import org.apache.rocketmq.spring.core.RocketMQLocalTransactionListener;
 import org.apache.rocketmq.spring.core.RocketMQLocalTransactionState;
@@ -38,6 +39,7 @@ import org.apache.rocketmq.spring.support.RocketMQHeaders;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageHeaders;
@@ -49,6 +51,7 @@ import org.springframework.util.MimeTypeUtils;
  * Producer, using RocketMQTemplate sends a variety of messages
  */
 @SpringBootApplication
+@ImportAutoConfiguration(RocketMQAutoConfiguration.class)
 public class ProducerApplication implements CommandLineRunner {
     @Resource
     private RocketMQTemplate rocketMQTemplate;
